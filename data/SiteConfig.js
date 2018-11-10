@@ -1,40 +1,40 @@
 module.exports = {
-  siteTitle: "Gatsby + WordPress + Netlifly Starter", // Site title.
-  siteTitleAlt: "GatsbyJS WordPress Netlifly API Starter", // Alternative site title for SEO.
+  siteTitle: "Zoran Vitez", // Site title.
+  siteTitleAlt: "Zoran Vitez's random thoughts", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
-  siteUrl: "http://wordpress-154986-534401.cloudwaysapps.com", // Domain of your website without pathPrefix.
+  siteUrl: "https://zoranitez.com", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
-  siteDescription: "A GatsbyJS + Netlifly starter with the WordPress API built in mind.", // Website description used for RSS feeds/meta description tag.
+  siteDescription: "A collection of thoughts on things that are often way beyond my understanding but I hope to learn more about", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
   siteFBAppID: "", // FB Application ID for using app insights
   googleAnalyticsID: "", // GA tracking ID.
-  disqusShortname: "", // Disqus shortname.
-  postDefaultCategoryID: "Tech", // Default category for posts.
-  userName: "User", // Username to display in the author segment.
-  userTwitter: "@justinwhall", // Optionally renders "Follow Me" in the UserInfo segment.
-  userLocation: "Denver, CO, USA ", // User location to display in the author segment.
-  userAvatar: "https://api.adorable.io/avatars/150/test.png", // User avatar to display in the author segment.
+  disqusShortname: "zoranvitez-com", // Disqus shortname.
+  postDefaultCategoryID: "Thoughts", // Default category for posts.
+  userName: "Zoran Vitez", // Username to display in the author segment.
+  userTwitter: "@ZoranVitez", // Optionally renders "Follow Me" in the UserInfo segment.
+  userLocation: "Lisbon, Portugal ", // User location to display in the author segment.
+  userAvatar: "https://s.gravatar.com/avatar/9fa5e2f815a6bc40153489b8c928cbb4?s=80", // User avatar to display in the author segment.
   userDescription:
-    "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people.", // User description to display in the author segment.
+    "Err..what does this button do?", // User description to display in the author segment.
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
   userLinks: [
     {
       label: "GitHub",
-      url: "https://github.com/justinwhall/gatsby-wordpress-netlifly-starter",
+      url: "https://github.com/zvitez",
       iconClassName: "fa fa-github"
     },
     {
       label: "Twitter",
-      url: "https://twitter.com/justinwhall",
+      url: "https://twitter.com/zoranvitez",
       iconClassName: "fa fa-twitter"
     },
     {
       label: "Email",
-      url: "justinwhall@me.com",
+      url: "zoran@zvitez.com",
       iconClassName: "fa fa-envelope"
     }
   ],
-  copyright: "Copyright © 2018. Advanced User", // Copyright string for the footer of the website and RSS feed.
+  copyright: "Copyright © 2018. Zoran Vitez", // Copyright string for the footer of the website and RSS feed.
   themeColor: "#c62828", // Used for setting manifest and progress theme colors.
   backgroundColor: "#e0e0e0" // Used for setting manifest background color.
 };

@@ -61,3 +61,6 @@ bundle-stats.json
 .idea/*
 .idea
 .DS_Store
+
+# Environment
+.env

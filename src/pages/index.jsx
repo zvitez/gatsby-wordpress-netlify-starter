@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import PostListing from '../components/Posts/PostListing/PostListing'
+import PageListing from '../components/Pages/PageListing/PageListing'
 import SEO from '../components/Accessories/SEO/SEO'
 import config from '../../data/SiteConfig'
 import TopNavigation from '../components/Layout/Navigation/Navigation'
@@ -9,6 +10,7 @@ import TopNavigation from '../components/Layout/Navigation/Navigation'
 class Index extends React.Component {
   render() {
     const postEdges = this.props.data.allWordpressPost.edges
+    const pageEdges = this.props.data.allWordpressPage.edges
     return (
       <HomeContainer>
         <Helmet title={config.siteTitle} />
@@ -34,6 +36,7 @@ class Index extends React.Component {
           </p>
           <Divider />
           <PostListing postEdges={postEdges} />
+          <PageListing pageEdges={pageEdges} />
         </MainContentContainer>
       </HomeContainer>
     )
@@ -88,6 +91,23 @@ export const pageQuery = graphql`
             name
           }
           categories {
+            name
+          }
+          content
+        }
+      }
+    }
+    allWordpressPage{
+      totalCount
+      edges {
+        node {        
+          date
+          slug
+          title
+          modified
+          excerpt
+          id        
+          author {                        
             name
           }
           content
