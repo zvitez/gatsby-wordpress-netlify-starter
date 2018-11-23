@@ -16,27 +16,9 @@ class Index extends React.Component {
         <Helmet title={config.siteTitle} />
         <SEO postEdges={postEdges} />
         <TopNavigation />
-        <MainContentContainer>
-          <h1>Gatsby + WordPress + Netlifly</h1>
-          <p style={{ textAlign: 'center' }}>
-            Created by{' '}
-            <a
-              style={{ fontSize: '1.6rem' }}
-              href="https://www.justinwhall.com"
-            >
-            Justin W. Hall :)
-            </a>.
-            {' '}You should follow him on{' '}
-            <a
-              style={{ fontSize: '1.6rem' }}
-              href="https://twitter.com/justinwhall"
-            >
-              Twitter.
-            </a>
-          </p>
+        <MainContentContainer>          
           <Divider />
           <PostListing postEdges={postEdges} />
-          <PageListing pageEdges={pageEdges} />
         </MainContentContainer>
       </HomeContainer>
     )

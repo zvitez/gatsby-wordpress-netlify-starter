@@ -4,7 +4,7 @@ module.exports = {
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
   siteUrl: "https://zoranitez.com", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
-  siteDescription: "A collection of thoughts on things that are often way beyond my understanding but I hope to learn more about", // Website description used for RSS feeds/meta description tag.
+  siteDescription: "A collection of random thoughts", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
   siteFBAppID: "", // FB Application ID for using app insights
   googleAnalyticsID: "", // GA tracking ID.
@@ -29,12 +29,22 @@ module.exports = {
       iconClassName: "fa fa-twitter"
     },
     {
+      label: "Facebook",
+      url: "https://facebook.com/zoran.vitez",
+      iconClassName: "fa fa-facebook"
+    },
+    {
+      label: "Pinterest",
+      url: "https://www.pinterest.pt/zvitez87/",
+      iconClassName: "fa fa-pinterest"
+    },
+    {
       label: "Email",
       url: "zoran@zvitez.com",
       iconClassName: "fa fa-envelope"
     }
   ],
   copyright: "Copyright © 2018. Zoran Vitez", // Copyright string for the footer of the website and RSS feed.
-  themeColor: "#c62828", // Used for setting manifest and progress theme colors.
-  backgroundColor: "#e0e0e0" // Used for setting manifest background color.
+  themeColor: "#149a24", // Used for setting manifest and progress theme colors.
+  backgroundColor: "#ffffff" // Used for setting manifest background color.
 };

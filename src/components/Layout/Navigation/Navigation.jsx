@@ -18,7 +18,7 @@ class TopNavigation extends Component {
         </TitleSection>
         <NavList>
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.justinwhall.com/headless-wordpress-gatsby-netlifly-continous-deployment/">Get Started</a>
+            <a target="_blank" rel="noopener noreferrer" href="/about">About</a>
           </li>
         </NavList>
       </NavigationContainer>

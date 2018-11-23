@@ -47,6 +47,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                 slug
                 status
                 template
+                content
                 fields {
                   deploy
                 }
@@ -102,6 +103,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             console.log(result.errors)
             reject(result.errors)
           }
+          
 
           const categories = []
           const postTemplate = path.resolve(`./src/templates/post.jsx`)
@@ -111,6 +113,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
           _.each(result.data.allWordpressPost.edges, edge => {
 
+            console.log(edge);
+            
             if (edge.node.fields.deploy) {
               // grab all the tags and categories for later use
               edge.node.categories.forEach(category => {

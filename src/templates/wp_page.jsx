@@ -4,18 +4,13 @@ import TopNavigation from '../components/Layout/Navigation/Navigation'
 
 class wpPage extends Component {
   render() {
-    const pageNode = {
-      title: this.props.data.wordpressPage.title,
-      content: this.props.data.wordpressPage.content,
-      id: this.props.data.wordpressPage.id,
-      slug: this.props.data.wordpressPage.slug
-    }
+    const pageNode = this.props.data.wordpressPage;    
 
     return (
       <div>
         <TopNavigation />
         <MainContentContainer>
-          <h1>{pageNode.title}</h1>
+          <h1>{pageNode.title}</h1>        
           <main>
             <div dangerouslySetInnerHTML={{ __html: pageNode.content }} />
           </main>
@@ -49,8 +44,8 @@ const MainContentContainer = styled.main`
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
-  query WordpressPage($slug: String) {
-    wordpressPage(slug: { eq: $slug }) {
+  query WordpressPage($id: String) {
+    wordpressPage(id: { eq: $id }) {
       id
       wordpress_id
       slug
