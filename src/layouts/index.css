@@ -1,240 +1,177 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  normal;
+  font-weight: 400;
+  src: url('/font/Inter-UI.var.woff2') format("woff2-variations"),
+       url("/font/Inter-UI-Regular.woff2") format("woff2"),
+       url("/font/Inter-UI-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  italic;
+  font-weight: 400;
+  src: url('/font/Inter-UI.var.woff2') format("woff2-variations"),
+       url("/font/Inter-UI-Italic.woff2") format("woff2"),
+       url("/font/Inter-UI-Italic.woff") format("woff");
+}
+
+
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  normal;
+  font-weight: 700;
+  src: url('/font/Inter-UI.var.woff2') format("woff2-variations"),
+       url("/font/Inter-UI-Bold.woff2") format("woff2"),
+       url("/font/Inter-UI-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  italic;
+  font-weight: 700;
+  src: url('/font/Inter-UI.var.woff2') format("woff2-variations"),
+       url("/font/Inter-UI-BoldItalic.woff2") format("woff2"),
+       url("/font/Inter-UI-BoldItalic.woff") format("woff");
+}
+
+
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 10px;
-  vertical-align: baseline;
-  font-family: -apple-system, BlinkMacSystemFont, 'avenir next', avenir,
-    helvetica, 'helvetica neue', Ubuntu, 'segoe ui', arial, sans-serif;
+  vertical-align: baseline;  
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
+body, html {
+  padding: 3vh 15vw;
+  font-family: 'Inter UI', sans-serif;
+}
+
+p {
+  font-size: 100%;
+  line-height: 1.6em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 22px;
+  line-height: 1.15;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 1.15;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 1.15;
+}
+
+h5 {
+  font-size: 16px;
+  line-height: 1.1;
+}
+
+h6 {
+  font-size: 14px;
+  line-height: 1.1;
+}
+
+@media (min-width: 981px) {
+  h1 {
+    font-size: 32px;
+    line-height: 1.28;
+  }
+  h2 {
+    font-size: 28px;
+    line-height: 1.15;
+  }
+  h3 {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+  h4 {
+    font-size: 20px;
+    line-height: 1.15;
+  }
+  h5 {
+    font-size: 18px;
+    line-height: 1.1;
+  }
+  h6 {
+    font-size: 16px;
+    line-height: 1.1;
+  }
+
+}
+
+
 a {
-  color: #0f1523;
+  position: relative;  
+  text-decoration: none;
+  color: #222;
+  transition: opacity 0.3s;  
+}
+
+p a {
+  opacity: 0.7;
+  color: #149a24;
+}
+
+header {
+  padding: 2em 0;
+  max-width: 700px;
+  margin: auto;
+}
+
+p a:after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  /* adjust this to move up and down. you may have to adjust the line height of the paragraph if you move it down a lot. */
+  bottom: -4px; 
+
+
+  /****** 
+  optional values below 
+  ******/
+  
+  /* center - (optional) use with adjusting width   */  
+  left: 0;  
+  width: 0%;
+  background: green;
+
+  /* optional animation */
+  -o-transition:.3s;
+  -ms-transition:.3s;
+  -moz-transition:.3s;
+  -webkit-transition:.3s;
+  transition:.3s;
+}
+
+/* optional hover classes used with anmiation */
+p a:hover:after {
+  width: 100%;
+  background: #f9415d;
+}
+
+p a:hover {
+  opacity: 1;
 }
 
 p,
 li {
-  color: #666;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 300;
-  line-height: 1.6;
-}
-
-h1 {
-  font-size: 4rem;
-}
-
-h2 {
-  font-size: 3rem;
-}
-
-h3 {
-  font-size: 2.6rem;
-}
-
-h4 {
-  font-size: 2.4rem;
-}
-
-h5 {
-  font-size: 2rem;
-}
-
-h6 {
-  font-size: 1.8rem;
-}
-
-p,
-li,
-div,
-em {
-  font-size: 1.6rem;
-  line-height: 1.7;
-  font-weight: 400;
 }
 
 ul {
   list-style: none;
-}
-
-main {
-  padding: 0 10px;
-}
-
-main ol,
-main ul {
-  margin-bottom: 30px;
-  padding-left: 17px;
-}
-
-a {
-  text-decoration: none;
-  transition: all 300ms ease;
-  background: rgba(144, 211, 241, 0.2);
-  padding: 3px;
-  font-size: .9em;
-}
-
-a:hover {
-  color: black;
-  background: rgba(132, 177, 219, 0.521);
-}
-
-@media screen and (max-width: 768px) {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-weight: 300;
-    line-height: 1.4;
-  }
-
-  h1 {
-    font-size: 3rem;
-  }
-
-  h2 {
-    font-size: 3.2rem;
-  }
-
-  h3 {
-    font-size: 2.2rem;
-  }
-
-  h4 {
-    font-size: 2rem;
-  }
-
-  h5 {
-    font-size: 1.8rem;
-  }
-
-  h6 {
-    font-size: 1.8rem;
-  }
-}
-
-pre,
-code {
-  background: #ededed;
-  font-family: Consolas, Menlo, Monaco, 'Andale Mono WT', 'Andale Mono',
-    'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono',
-    'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L',
-    'Courier New', Courier, monospace;
-  font-size: 1.8rem;
-  line-height: 1.375;
-  direction: ltr;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-  color: black;
-}
-
-pre {
-  border-radius: 5px;
-  padding: 20px;
 }

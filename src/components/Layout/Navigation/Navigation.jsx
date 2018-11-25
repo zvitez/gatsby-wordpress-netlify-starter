@@ -7,39 +7,21 @@ import Logo from '../../Accessories/Logo'
 class TopNavigation extends Component {
   render() {
     return (
-      <NavigationContainer>
+      <header>
         <TitleSection>
           <Link to="/">
             <Logo />
-          </Link>
-          <Link to="/">
-            <h3>{siteTitle}</h3>
-          </Link>
+          </Link>          
         </TitleSection>
         <NavList>
-          <li>
+          {/*<li>
             <a target="_blank" rel="noopener noreferrer" href="/about">About</a>
-          </li>
+          </li>*/}
         </NavList>
-      </NavigationContainer>
+      </header>
     )
   }
 }
-
-const NavigationContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin: auto;
-  padding: 10px 100px;
-  background: #93cef5;
-
-  @media (max-width: 900px) {
-    display: block;
-    padding: 20px 20px;
-  }
-`
 
 const TitleSection = styled.div`
   display: flex;

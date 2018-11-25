@@ -17,7 +17,6 @@ class Index extends React.Component {
         <SEO postEdges={postEdges} />
         <TopNavigation />
         <MainContentContainer>          
-          <Divider />
           <PostListing postEdges={postEdges} />
         </MainContentContainer>
       </HomeContainer>
@@ -35,23 +34,8 @@ const Divider = styled.div`
 `
 
 const MainContentContainer = styled.main`
-  width: 600px;
-  margin: 50px auto;
-
-  h1 {
-    text-align: center;
-    font-weight: 700;
-    margin-bottom: 25px;
-  }
-
-  p {
-    font-size: 16px;
-    margin-bottom: 25px;
-  }
-
-  pre {
-    background-color: grey;
-  }
+  max-width: 700px;  
+  margin: auto;  
 `
 
 /* eslint no-undef: "off" */

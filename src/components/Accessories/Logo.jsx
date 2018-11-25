@@ -17,6 +17,6 @@ export default Logo
 
 const LogoContainer = styled.div`
   & img {
-    width: 50px;
+    width: 120px;
   }
 `

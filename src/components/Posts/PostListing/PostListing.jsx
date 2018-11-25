@@ -27,15 +27,22 @@ class PostListing extends React.Component {
         postList.map(post => (
           <PostListContainer key={post.path}>
             <Link className="post-link" to={post.path} key={post.title}>
-              {post.featuredImg &&
-                <img src={post.featuredImg} alt={post.title} className="featured-image" />
-              }
-              <h3>{post.title}</h3>
-              <h5>
-                {post.date} in {post.mainCategory} by {post.authorName}
-              </h5>
-              <div dangerouslySetInnerHTML={{ __html: post.excerpt }} />
+              { post.featuredImg && <img src={post.featuredImg} alt={post.title} className="featured-image" />
+              }          
             </Link>
+            <h3>
+              <Link className="post-link" to={post.path} key={post.title}>
+                {post.title}
+              </Link>
+            </h3>            
+            {
+              /*
+            <h5>
+              {post.date} in {post.mainCategory} by {post.authorName}
+            </h5>
+            */
+            }
+            <div dangerouslySetInnerHTML={{ __html: post.excerpt }} />
           </PostListContainer>
         ))}
       </div>
@@ -48,17 +55,7 @@ const PostListContainer = styled.div`
 
   h3 {
     position: relative;
-  }
-
-  h3:before {
-    content: '';
-    width: 50px;
-    background-color: #93cef5;
-    height: 6px;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+  }  
 
   .featured-image {
     width: 600px;

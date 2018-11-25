@@ -43,25 +43,27 @@ export default class PostTemplate extends React.Component {
           </MetaSection>
 
           <div dangerouslySetInnerHTML={{ __html: postNode.content }} />
+
+          {/*
           <div className="tags">
             <h4> More Like This: </h4>
-          </div>
+          </div>          
           <Divider />
           <div className="post-meta">
             <SocialLinks postPath={slug} postNode={postNode} />
           </div>
           <UserInfo config={config} />
           <Disqus postNode={postNode} />
+          */
+          }
         </PostContainer>
       </div>
     )
   }
 }
-
-const PostContainer = styled.div`
-  max-width: 900px;
-  margin: 100px auto;
-
+const PostContainer = styled.main`
+  max-width: 700px;  
+  margin: auto;  
   .tags {
     display: flex;
     flex-flow: row;
@@ -84,11 +86,7 @@ const MetaSection = styled.div`
   img {
     width: 96px;
     height: 96px;
-  }
-  .cat-link {
-    font-size: 2rem;
-    margin-left: 2px;
-  }
+  }  
 `
 
 /* eslint no-undef: "off" */

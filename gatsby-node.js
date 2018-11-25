@@ -17,7 +17,7 @@ exports.onCreateNode = ({ node, boundActionCreators }) => {
 
   if (!Object.prototype.hasOwnProperty.call(node, 'meta')) {
     return;
-  }
+  }  
 
   let deploy;
 
